@@ -1,0 +1,47 @@
+{
+    "moduleName": "Wolframalpha",
+    "files": {
+        "frontEnd": [
+            {
+                "className": "HUGUESDPDN_CLASSNAME_Wolframalpha",
+                "filePath": "HUGUESDPDN_FILE_FRONT_Main"
+            }
+        ],
+        "backEnd": [
+            {
+                "objectName": "HUGUESDPDN_OBJECTNAME_Wolframalpha",
+                "filePath": "HUGUESDPDN_FILE_BACK_Main"
+            }
+        ],
+        "templates": [
+            {
+                "templateId": "HUGUESDPDN_TEMPLATE_Reset",
+                "filePath": "HUGUESDPDN_FILE_TEMPLATE_Reset"
+            },
+            {
+                "templateId": "HUGUESDPDN_TEMPLATE_ShowResults",
+                "filePath": "HUGUESDPDN_FILE_TEMPLATE_ShowResults"
+            },
+            {
+                "templateId": "HUGUESDPDN_TEMPLATE_ShowPossibilities",
+                "filePath": "HUGUESDPDN_FILE_TEMPLATE_ShowPossibilities"
+            },
+            {
+                "templateId": "HUGUESDPDN_TEMPLATE_ShowFirstPossibilities",
+                "filePath": "HUGUESDPDN_FILE_TEMPLATE_ShowFirstPossibilities"
+            },			
+            {
+                "templateId": "HUGUESDPDN_TEMPLATE_ErrorServer",
+                "filePath": "HUGUESDPDN_FILE_TEMPLATE_ErrorServer"
+            },
+            {
+                "templateId": "HUGUESDPDN_TEMPLATE_ErrorInternet",
+                "filePath": "HUGUESDPDN_FILE_TEMPLATE_ErrorInternet"
+            },
+            {
+                "templateId": "HUGUESDPDN_TEMPLATE_Result",
+                "filePath": "HUGUESDPDN_FILE_TEMPLATE_Result"
+            }
+        ]
+    }
+}

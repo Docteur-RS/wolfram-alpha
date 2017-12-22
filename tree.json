@@ -1,0 +1,6 @@
+{
+    "R|(research).*": {
+        "_response": "Wolframalpha|HUGUESDPDN_OBJECTNAME_Wolframalpha|launch",
+        "_jump": "mainSection"
+    }
+}

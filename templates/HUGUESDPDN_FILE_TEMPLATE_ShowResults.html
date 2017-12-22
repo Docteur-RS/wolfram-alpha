@@ -1,0 +1,53 @@
+<style>
+    .buttonResetWolframalpha {
+	-moz-box-shadow:inset 0px 0px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 0px 0px 0px #ffffff;
+	box-shadow:inset 0px 0px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #b00020), color-stop(1, #ff3300));
+	background:-moz-linear-gradient(top, #b00020 5%, #ff3300 100%);
+	background:-webkit-linear-gradient(top, #ededed 5%, #ff3300 100%);
+	background:-o-linear-gradient(top, #b00020 5%, #ff3300 100%);
+	background:-ms-linear-gradient(top, #b00020 5%, #ff3300 100%);
+	background:linear-gradient(to bottom, #b00020 5%, #ff3300 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b00020', endColorstr='#ff3300',GradientType=0);
+	background-color:#ff3300;
+	-moz-border-radius:20px;
+	-webkit-border-radius:80px;
+	border-radius:80px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#ededed;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:0px 30px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #ffffff;}
+    
+    .buttonResetWolframalpha:active {
+	position:relative;
+	top:1px;}
+</style>
+
+<script type="text/javascript">
+    function WolframalphaShowIt() {
+    document.getElementById("HUGUESDPDN_Wolframalpha_Retry").style.visibility = "visible";}
+    setTimeout("WolframalphaShowIt()", 7500);
+</script>
+
+<div style="background-color: #e5eff1; text-align: center; height: 100%; width: 100%; margin: 0 auto;">
+	<div id="HUGUESDPDN_LOADING_Wolframalpha" style="background-color: #e5eff1; text-align: center; width: 100%; margin: 0 auto;">
+		<img src="modules/wolframalpha/templates/Loading.gif" alt="Loading" />
+		<div id="HUGUESDPDN_Wolframalpha_Retry" style="padding-top: 30px; padding-bottom: 20px; visibility: hidden">
+			<button id="HUGUESDPDN_Wolframalpha_Retry_Button" class="buttonResetWolframalpha" type="button">
+				<h1>Retry</h1>
+			</button>
+		</div>
+	</div>
+
+	<div id="HUGUESDPDN_Wolframalpha_Results" style="background-color: #e5eff1; text-align: center; height: auto; width: 100%;">
+		<img src="modules/wolframalpha/templates/Wolframalpha.png" alt="Wolframalpha_Logo">
+		<div id="HUGUESDPDN_Wolframalpha_Results_Raw"></div>
+	</div>
+</div>
