@@ -1,7 +1,7 @@
 # wolfram-alpha</br></br>
 Searches using wolfram alpha</br></br>
 
-<img width="86%" src="https://user-images.githubusercontent.com/12821004/34327600-b1301bea-e8c8-11e7-9649-3aafe8417fc8.png">
+<img width="86%" src="https://user-images.githubusercontent.com/12821004/34327600-b1301bea-e8c8-11e7-9649-3aafe8417fc8.png"><br><br>
 
 Wolfram|Alpha is a computational knowledge engine for computing answers and providing knowledge; it is not a search engine.</br></br>
 
