@@ -72,15 +72,46 @@ Wolframalpha.prototype.getWebPage = function (myURL)
 
 Wolframalpha.prototype.prelaunch = function (userText)
 {
+    console.log("un peu decu lol = ", userText);
     userText = this.makeURL(userText);
     this.getWebPage(userText);
 };
 
-Wolframalpha.prototype.launch = function (paramFromTree, userText)
+Wolframalpha.prototype.launch1 = function (paramFromTree, userText)
 {
-	userText = this.deleteResearch(userText);
-    this.moduleSysMngr.frontMngr.callFrontModule("Wolframalpha", "HUGUESDPDN_CLASSNAME_Wolframalpha", "showResults", userText);
-	this.prelaunch(userText);
+    this.parse("(?:search|find|research)(?: (?:on wolfram alpha)| (?:on wolframalpha)| (?:on wolfram))(.*)", userText);
 };
+
+Wolframalpha.prototype.launch2 = function (paramFromTree, userText)
+{
+    this.parse("(?:search|find|research)(.*)(?: (?:on wolfram alpha)| (?:on wolframalpha)| (?:on wolfram))", userText)
+};
+
+
+Wolframalpha.prototype.launch3 = function (paramFromTree, userText)
+{
+    this.parse("(?:(?:wolframe? alpha)|(?:wolframe?alpha)|(?:wolframe?))(.*)", userText);
+};
+
+Wolframalpha.prototype.parse = function (sRegex, userText)
+{
+    var regex = new RegExp(sRegex);
+    var match = regex.exec(userText.toLowerCase());
+
+    if (match !== null)
+    {
+        this.moduleSysMngr.frontMngr.callFrontModule("Wolframalpha", "HUGUESDPDN_CLASSNAME_Wolframalpha", "showResults", userText);
+        this.prelaunch(match[1].trim());
+    }
+    else
+        this.moduleSysMngr.frontMngr.callFrontSysModule("tchat", "postMessage", "Hum, an error occured sorry. Maybe try again later...")
+};
+
+//Wolframalpha.prototype.launch = function (paramFromTree, userText)
+//{
+//	userText = this.deleteResearch(userText);
+//    this.moduleSysMngr.frontMngr.callFrontModule("Wolframalpha", "HUGUESDPDN_CLASSNAME_Wolframalpha", "showResults", userText);
+//	this.prelaunch(userText);
+//};
 
 module.exports = Wolframalpha;

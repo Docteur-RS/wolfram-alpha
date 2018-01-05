@@ -1,6 +1,14 @@
 {
-    "R|(research).*": {
-        "_response": "Wolframalpha|HUGUESDPDN_OBJECTNAME_Wolframalpha|launch",
+    "R|(?:search|find|research)(?: (?:on wolfram alpha)| (?:on wolframalpha)| (?:on wolfram))(.*)": {
+        "_response": "Wolframalpha|HUGUESDPDN_OBJECTNAME_Wolframalpha|launch1",
+        "_jump": "mainSection"
+    },
+    "R|(?:search|find|research)(.*)(?: (?:on wolfram alpha)| (?:on wolframalpha)| (?:on wolfram))": {
+        "_response": "Wolframalpha|HUGUESDPDN_OBJECTNAME_Wolframalpha|launch2",
+        "_jump": "mainSection"
+    },
+    "R|(?:(?:wolframe? alpha)|(?:wolframe?alpha)|(?:wolframe?))(.*)": {
+        "_response": "Wolframalpha|HUGUESDPDN_OBJECTNAME_Wolframalpha|launch3",
         "_jump": "mainSection"
     }
 }
